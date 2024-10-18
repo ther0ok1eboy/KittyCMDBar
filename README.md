@@ -30,7 +30,15 @@ One night when I was sleeping I was thinking that it would be nice to have a sta
 | kitty     | Arch | ✅      |
 | alacritty | Arch | ❌      |
 
+## Quickstart
 
++ It is not recommended to clone this repository directly, unless you want to do secondary development. Download the corresponding zip package, you need to unzip to the `$HOME` directory, make sure the path is correct, run `~/KittyCMDBar/startup.sh`.
+
++ The first run will check if the relevant commands can be executed, otherwise you need to install the corresponding commands.
+
+    `$ bash ~/KittyCMDBar/startup.sh`
+
+## Enjoy it!
 
 ## License
 
