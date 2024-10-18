@@ -13,15 +13,15 @@ One night when I was sleeping I was thinking that it would be nice to have a sta
 - Customizable functions in response to mouse click events.
 
 ## Requirements
-- nerd-font
-- kitty
-- tput
-- hyprctl
-- brightnessctl
-- pactl
-- upower
-- nmcli
-- playerctl
+- [nerd-font](https://www.nerdfonts.com/)
+- [kitty](https://github.com/kovidgoyal/kitty)
+- [tput]
+- [hyprctl](https://github.com/hyprwm/Hyprland)
+- [brightnessctl]
+- [pactl]
+- [upower]
+- [nmcli]
+- [playerctl]
 
 ## Support
 
