@@ -37,8 +37,8 @@ home_char=$(home_func)
 # weather 区
 weather_func() {
 
-    text=$(cat /tmp/weather.txt)
-    curl -s "https://wttr.in/$1?format=%c+%f" > /tmp/weather.txt &
+    text=$(cat ~/KittyCMDBar/tmp/weather.txt)
+    curl -s "https://wttr.in/$1?format=%c+%f" > ~/KittyCMDBar/tmp/weather.txt &
     
     text=$(echo "$text" | sed -E "s/\s+/ /g")
     weather_icon=$(echo "$text" | sed -E "s/\s+/ /g" | awk '{print $1}')
@@ -112,13 +112,13 @@ time_char=$(time_func)
 # 系统托盘区
 tray_func() {
 
-    for i in $(cat /tmp/icon.txt); do
+    for i in $(cat ~/KittyCMDBar/tmp/icon.txt); do
         if (( ${#i} != 0 )) ; then
             ((count++))
             icon+="$i "
         fi
     done
-    echo "" > /tmp/icon.txt
+    echo "" > ~/KittyCMDBar/tmp/icon.txt
     # 返回图标和图标数量
     printf "%s:%d" "$icon" "$count"
 }
@@ -259,7 +259,7 @@ cpu_func() {
     icon1="󱑬 "
     icon2="󰈐 "
 
-    value=$(cat /tmp/cpu.txt | awk -F '%' '{print$1}')
+    value=$(cat ~/KittyCMDBar/tmp/cpu.txt | awk -F '%' '{print$1}')
     if (( $value < 50 )); then
         icon="$icon2$value%"
         echo -e "\e]8;;8.bar\e\\$icon\e]8;;\e\\"

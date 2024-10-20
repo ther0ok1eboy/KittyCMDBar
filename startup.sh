@@ -8,10 +8,9 @@ if (( $cols < 150 )); then
     exit 0
 fi
 
-# 预加载图库
-~/KittyCMDBar/src/load.sh &
-
-if [ -e /tmp/weather.txt ] && [ -e /tmp/lib.txt ]; then
+if [ -e ~/KittyCMDBar/tmp/lib.txt ]; then
+    # 预加载图库
+    ~/KittyCMDBar/src/load.sh &
     cd ~/KittyCMDBar
     ./config/config.sh
 else

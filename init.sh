@@ -14,10 +14,8 @@
 read -p "是否开始初始化...(y/n) " option
 if [ $option == "y" ]; then
 
-    cp ~/KittyCMDBar/icon/weather.txt /tmp
-    cp ~/KittyCMDBar/icon/lib.txt /tmp
     cp ~/KittyCMDBar/config/open-actions.conf ~/.config/kitty
-    cp ~/KittyCMDBar/icon/cpu.txt /tmp
+    cp ~/KittyCMDBar/icon/* ~/KittyCMDBar/tmp
     chmod +x * -R
 
     # 定义需要检查的命令列表
